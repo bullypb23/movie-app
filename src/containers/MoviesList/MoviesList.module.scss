@@ -1,0 +1,53 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.MoviesList {
+  flex-basis: 80%;
+  padding: 30px 0 50px;
+
+  .SearchParams {
+    width: 100%;
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+
+    h3 {
+      flex: 1 1 100%;
+      color: $secondary;
+      font-size: 2.5rem;
+      padding-bottom: 10px;
+    }
+    
+    p {
+      flex: 1 1 100%;
+      font-size: 1.2rem;
+      padding-bottom: 10px;
+    }
+  }
+
+  .Sort {
+    width: 100%;
+    @include flex(center, flex-start);
+    padding: 10px 0;
+  }
+
+  .MoviesContainer {
+    width: 100%;
+    @include flex(space-around, flex-start);
+    padding: 10px;
+    flex-wrap: wrap;
+
+    .NotFound {
+      flex: 1 1 100%;
+      font-size: 1.2rem;
+      color: $secondary;
+
+      a {
+        color: $primary;
+      }
+    }
+  }
+
+  .Pagination {
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,95 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.MovieDetails {
+  padding: 30px 0 50px;
+  flex-basis: 80%;
+  @include flex(center, flex-start);
+
+  .Wrapper {
+    flex: 1 1 30%;
+    @include flex(flex-start, center);
+    flex-direction: column;
+
+    .ImgContainer {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .Content {
+      width: 100%;
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.5rem;
+        color: $secondary;
+        text-align: left;
+      }
+
+      p {
+        width: 100%;
+        padding: 10px 0;
+        text-align: left;
+      }
+    }
+  }
+
+  .BodyContainer {
+    flex: 1 1 70%;
+    padding: 0 20px;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+
+    .Heading {
+      width: 100%;
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+
+      h1 {
+        font-size: 3rem;
+        color: $secondary;
+        text-align: left;
+      }
+      
+      span {
+        width: 100%;
+        font-size: 0.8rem;
+        color: $primary;
+        text-align: left;
+      }
+      
+      p {
+        width: 100%;
+        padding: 10px 0;
+        text-align: left;
+      }
+    }
+
+    .Content {
+      width: 100%;
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.5rem;
+        color: $secondary;
+        text-align: left;
+      }
+
+      p {
+        width: 100%;
+        padding: 10px 0;
+        text-align: left;
+      }
+
+      button {
+        @include button($primary, 30%);
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.SortResults {
+  flex: 1 1 50%;
+  @include flex(center, flex-start);
+  flex-direction: column;
+
+  h3 {
+    width: 100%;
+    color: $secondary;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+
+  .ButtonContainer {
+    width: 100%;
+    @include flex(center, flex-start);
+    
+    button {
+      @include button($primary, auto);
+      margin: 0 10px;
+      font-size: 1rem;
+      @include flex(center, center);
+
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+}

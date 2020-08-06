@@ -1,0 +1,41 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.HomePage {
+  flex-basis: 80%;
+  padding: 30px 0 50px;
+
+  .Heading {
+    width: 100%;
+
+    h1 {
+      font-size: 4rem;
+      color: $secondary;
+      padding-bottom: 20px;
+    }
+  }
+
+  form {
+    width: 100%;
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+
+    .FormControl {
+      flex: 1 1 70%;
+      @include flex(center, flex-start);
+      margin-bottom: 20px;
+      
+      input {
+        @include input(40%);
+      }
+    }
+
+    .FormButton {
+      flex: 1 1 50%;
+      
+      button {
+        @include button($primary, 20%);
+      }
+    }
+  }
+}

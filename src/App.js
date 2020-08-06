@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import './App.scss';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
+import Header from './components/Header/Header';
+import HomePage from './containers/HomePage/HomePage';
+import MoviesList from './containers/MoviesList/MoviesList';
+import MovieDetails from './containers/MovieDetails/MovieDetails';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <main className='main'>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/movies/:id" component={MovieDetails} />
+            <Route path="/movies" component={MoviesList} />
+            <Redirect to="/" />
+          </Switch>
+        </main>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default withRouter(App);

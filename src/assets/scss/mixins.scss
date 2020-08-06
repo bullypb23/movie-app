@@ -1,0 +1,40 @@
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin input($width) {
+  width: $width;
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid $secondary;
+  outline: none;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: 0.2s all;
+  
+  &:focus {
+    border-bottom: 2px solid lighten($primary, 15);
+  }
+}
+
+@mixin button($color, $width) {
+  background-color: $color;
+  width: $width;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0;
+
+  &:hover {
+    background-color: lighten($color, 15);
+  }
+
+  &:disabled {
+    background-color: $background;
+  }
+}

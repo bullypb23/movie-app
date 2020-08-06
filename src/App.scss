@@ -1,0 +1,65 @@
+@import './assets/scss/mixins.scss';
+@import './assets/scss/variables.scss';
+
+.App {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  width: 100%;
+  @include flex(center, flex-start);
+}
+
+.error {
+  color: $red;
+  font-size: 1.2rem;
+}
+
+ul.pagination {
+  @include flex(center, flex-start);
+
+  li {
+    flex-basis: 5%;
+    height: 100%;
+    border: 1px solid $primary;
+    @include flex(center, center);
+    
+    a {
+      height: 100%;
+      color: $primary;
+      padding: 5px;
+      font-size: 1.2rem;
+    }
+
+    &.active {
+      background-color: $primary;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &.disabled {
+      border-color: $background;
+
+      a {
+        color: $background;
+      }
+    }
+  }
+}

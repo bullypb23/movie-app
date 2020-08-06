@@ -1,0 +1,54 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.MovieComponent {
+  flex-basis: 30%;
+  @include flex(center, flex-start);
+  flex-wrap: wrap;
+  -webkit-box-shadow: 0px 0px 5px 1px $secondary;
+  -moz-box-shadow: 0px 0px 5px 1px $secondary;
+  box-shadow: 0px 0px 5px 1px $secondary;
+  margin: 10px;
+
+  .MoviePoster {
+    flex: 1 1 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .MovieBody {
+    flex: 1 1 100%;
+    padding: 10px;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+
+    h3 {
+      font-size: 1.5rem;
+      color: $secondary;
+      text-align: left;
+    }
+
+    span {
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+
+    p {
+      padding-top: 10px;
+    }
+
+    div {
+      width: 100%;
+      @include flex(center, flex-start);
+      padding-top: 10px;
+
+      a {
+        @include button($primary, 50%);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
