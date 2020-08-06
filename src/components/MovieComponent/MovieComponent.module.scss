@@ -45,10 +45,23 @@
       padding-top: 10px;
 
       a {
-        @include button($primary, 50%);
+        @include button($primary, auto);
         text-transform: uppercase;
         font-size: 0.8rem;
       }
     }
+  }
+}
+
+@include media-sm {
+  .MovieComponent {
+    flex: 1 1 80%;
+  }
+}
+
+@include media-md {
+  .MovieComponent {
+    flex: 1 1 40%;
+    margin: 20px;
   }
 }

@@ -51,3 +51,26 @@
     padding: 20px 0;
   }
 }
+
+@include media-sm {
+  .MoviesList {
+    flex: 1 1 100%;
+    
+    .SearchParams h3 {
+      flex-basis: 80%;
+      font-size: 2rem;
+    }
+
+    .Sort {
+      @include flex(flex-start, center);
+      flex-direction: column;
+    }
+  }
+}
+
+@include media-md {
+  .MoviesList {
+    flex: 1 1 100%;
+    padding: 30px 10px 50px;
+  }
+}

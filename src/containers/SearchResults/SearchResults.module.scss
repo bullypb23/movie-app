@@ -23,3 +23,15 @@
     }
   }
 }
+
+@include media-md {
+  .SearchResults {
+    width: 100%;
+
+    .TypeSearch {
+      select {
+        width: 40%;
+      }
+    }
+  }
+}

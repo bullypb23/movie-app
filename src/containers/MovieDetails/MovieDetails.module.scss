@@ -93,3 +93,29 @@
     }
   }
 }
+
+@include media-sm {
+  .MovieDetails {
+    flex: 1 1 100%;
+    padding: 30px 20px 50px;
+    @include flex(center, flex-start);
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    .Wrapper {
+      flex: 1 1 100%;
+    }
+
+    .BodyContainer {
+      flex: 1 1 100%;
+      padding: 0;
+    }
+  }
+}
+
+@include media-md {
+  .MovieDetails {
+    padding: 30px 20px 50px;
+    flex: 1 1 100%;
+  }
+}

@@ -39,3 +39,32 @@
     }
   }
 }
+
+@include media-sm {
+  .HomePage {
+    flex: 1 1 100%;
+    padding: 30px 10px 50px;
+
+    .Heading h1 {
+      font-size: 3rem;
+    }
+
+    form {
+      .FormControl {
+        flex: 1 1 100%;
+
+        input {
+          @include input(70%);
+        }
+      }
+
+      .FormButton {
+        flex: 1 1 100%;
+
+        button {
+          @include button($primary, auto);
+        }
+      }
+    }
+  }
+}
