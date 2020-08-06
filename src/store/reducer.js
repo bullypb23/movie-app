@@ -9,6 +9,7 @@ const initialState = {
   title: '',
   year: '',
   error: '',
+  loading: false,
   selectedMovie: null,
   movieError: '',
   searchType: 'all',
@@ -26,6 +27,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         year: action.year
+      }
+    case actionTypes.SET_LOADING:
+      return {
+        ...state,
+        loading: action.loading
       }
     case actionTypes.SEARCH_MOVIES_SUCCESS:
       return {

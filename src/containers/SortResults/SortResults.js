@@ -12,7 +12,7 @@ class SortResults extends Component {
   render() {
     return (
       <div className={classes.SortResults}>
-        <h3>Sort by</h3>
+        <h3>Sort results by</h3>
         <div className={classes.ButtonContainer}>
           <button onClick={() => this.handleSort('yearAsc')}>
             Year 

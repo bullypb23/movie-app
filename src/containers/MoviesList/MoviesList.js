@@ -7,6 +7,7 @@ import Pagination from "react-js-pagination";
 import * as actions from '../../store/actions';
 import SearchResults from '../SearchResults/SearchResults';
 import SortResults from '../SortResults/SortResults';
+import Spinner from '../../components/Spinner/Spinner';
 
 class MoviesList extends Component {
   
@@ -69,6 +70,7 @@ class MoviesList extends Component {
         ) : null}
         <div className={classes.MoviesContainer}>
           {moviesList}
+          {this.props.loading ? <Spinner /> : null}
         </div>
         {this.props.movies.data.length !== 0 ? (
           <div className={classes.Pagination}>
@@ -97,7 +99,8 @@ const mapStateToProps = state => {
     page: state.page,
     error: state.error,
     type: state.searchType,
-    sort: state.sortType
+    sort: state.sortType,
+    loading: state.loading
   }
 }
 

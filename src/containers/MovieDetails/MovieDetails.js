@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions';
 import classes from './MovieDetails.module.scss';
 import noImage from '../../assets/img/no-image.jpg';
+import Spinner from '../../components/Spinner/Spinner';
 
 class MovieDetails extends Component {
   componentDidMount() {
@@ -84,6 +85,7 @@ class MovieDetails extends Component {
     }
     return (
       <div className={classes.MovieDetails}>
+        {this.props.loading ? <Spinner /> : null}
         {movie}
       </div>
     )
@@ -92,7 +94,8 @@ class MovieDetails extends Component {
 
 const mapStateToProps = state => {
   return {
-    selectedMovie: state.selectedMovie
+    selectedMovie: state.selectedMovie,
+    loading: state.loading
   }
 }
 
